@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Control Flow</title>
+</head>
+<body>
+
+<h2>Min</h2>
+<form>
+  <label for="num1">Your number:</label>
+  <input type="number" id="num1" name="num1">
+  <br><br>
+  <label for="num2">Your number:</label>
+  <input type="number" id="num2" name="num2">
+  <br><br>
+  <label for="num3">Your number:</label>
+  <input type="number" id="num3" name="num3">
+  <br><br>
+  <button type="button" onclick="getMin()">Calculate</button>
+</form>
+<p>Result: <span id="result1"></span></p>
+<br>
+
+<!---->
+
+<h2>Even Odd checker</h2>
+<form>
+  <label for="num4">Your number:</label>
+  <input type="number" id="num4" name="num4">
+  <br><br>
+  <label for="num5">Your number:</label>
+  <input type="number" id="num5" name="num5">
+  <br><br>
+  <label for="num6">Your number:</label>
+  <input type="number" id="num6" name="num6">
+  <br><br>
+  <button type="button" onclick="evenOrOdd()">Calculate</button>
+</form>
+<p>Result: <span id="result2"></span></p>
+<br>
+
+<!---->
+
+<h2>Range</h2>
+<form>
+  <label for="num7">Your x:</label>
+  <input type="number" id="num7" name="num7">
+  <br><br>
+  <label for="num8">Your y:</label>
+  <input type="number" id="num8" name="num8">
+  <br><br>
+  <label for="num9">Your number:</label>
+  <input type="number" id="num9" name="num9">
+  <br><br>
+  <button type="button" onclick="inOrOutRange()">Calculate</button>
+</form>
+<p>Result: <span id="result3"></span></p>
+<br>
+
+<!---->
+
+<script>
+  function getMin() {
+    const num1 = parseFloat(document.getElementById('num1').value);
+    const num2 = parseFloat(document.getElementById('num2').value);
+    const num3 = parseFloat(document.getElementById('num3').value);
+    document.getElementById('result1').textContent = Math.min(num1, num2, num3);
+  }
+
+  function evenOrOdd() {
+    let result;
+    const num4 = parseFloat(document.getElementById('num4').value);
+    const num5 = parseFloat(document.getElementById('num5').value);
+    const num6 = parseFloat(document.getElementById('num6').value);
+    if (num4 % 2 === 0 && num5 % 2 === 0 && num6 % 2 === 0) result = "even";
+    else if (num4 % 2 !== 0 && num5 % 2 !== 0 && num6 % 2 !== 0) result = "odd";
+    else result = "even/odd";
+    document.getElementById('result2').textContent = result;
+  }
+
+  function inOrOutRange() {
+    let result;
+    const num7 = parseFloat(document.getElementById('num7').value);
+    const num8 = parseFloat(document.getElementById('num8').value);
+    const num9 = parseFloat(document.getElementById('num9').value);
+    if (num9 >= num7 && num9 <= num8) result = "In range";
+    else result = "Out of range";
+    document.getElementById('result3').textContent = result;
+  }
+</script>
+</body>
+</html>

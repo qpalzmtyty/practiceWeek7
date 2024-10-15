@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOOPs</title>
+</head>
+<body>
+
+<form>
+  <h2>String of numbers</h2>
+  <input type="text" id="num1" placeholder="Enter numbers separated by commas">
+  <button type="button" onclick="createString()">Calculate</button>
+  <p>Result: <span id="result1"></span></p>
+</form>
+
+<!---->
+
+<form>
+  <h2>Range sum1</h2>
+  <input type="text" id="num2" placeholder="Enter numbers separated by commas">
+  <button type="button" onclick="rangeSum1()">Calculate</button>
+  <p>Result: <span id="result2"></span></p>
+</form>
+
+<!---->
+
+<script>
+  function createString() {
+    const input = document.getElementById('num1').value;
+    const numbers = input.split(',').map(Number);
+
+    const [min, max, step] = numbers;
+
+    let resultArray = [];
+    for (let i = min; i <= max; i += step) {
+      resultArray.push(i);
+    }
+
+    const resultString = resultArray.join(' ');
+
+    document.getElementById('result1').textContent = resultString;
+  }
+
+  function rangeSum1() {
+    const input = document.getElementById('num2').value;
+    const numbers = input.split(',').map(Number);
+
+    const [num1, num2] = numbers;
+
+    for (let i = )
+  }
+</script>
+</body>
+</html>
